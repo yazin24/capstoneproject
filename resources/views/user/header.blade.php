@@ -1,7 +1,7 @@
 <header class="header_section">
     <div class="container">
        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html"><img width="250" src="user/images/logo.png" alt="#" /></a>
+          <a class="navbar-brand" href="{{url('/')}}"><img width="250" src="user/images/logo.png" alt="#" /></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""> </span>
           </button>
@@ -11,10 +11,13 @@
                    <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                   <a class="nav-link" href="product.html">Products</a>
+                   <a class="nav-link" href="{{url('products')}}">Products</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link"href="{{route('show_cart')}}"><i class="fa fa-shopping-cart mr-2"></i>Cart</a>
+                  <a class="nav-link" href="{{url('show_cart')}}"><i class="fa fa-shopping-cart mr-2"></i>Cart</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url('show_order')}}">Order</a>
                 </li>
                 <form class="form-inline">
                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">

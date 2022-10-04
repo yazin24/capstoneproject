@@ -9,17 +9,9 @@
          <!-- header section strats -->
         @include('user.header')
          <!-- end header section -->
-
-         <!-- slider section -->
-         @include('user.slider')
-         <!-- end slider section -->
-      </div>
-      <!-- why section -->
-      @include('user.why')
-      <!-- end why section -->
       
       <!-- product section -->
-      @include('user.product')
+      @include('user.product_view')
       <!-- end product section -->
 
       <!--Comment Section-->
@@ -59,26 +51,26 @@
          @endforeach
       </div>
 
+      <!--Comment Textbox-->
 
-      <!-- footer start -->
-      @include('user.footer')
-      <!-- footer end -->
+      <div class="replyDiv mt-4" style="display:none; ">
+
+         <form action="{{url('add_reply')}}" method="post">
+
+            @csrf
+
+         <input type="text" id="commentId" name="commentId" hidden>
+
+         <textarea style="height: 100px; width: 500px;" name="reply" placeholder="Write your comment here..."></textarea>
+         <br/>
+         <button type="submit" class="btn bg-primary text-white">Reply</button>
+         <a href="javascript::void(0)" class="btn btn-primary" onClick="reply_close(this)">Close</a>
+         
+         </form>
+      </div>
+
      @include('user.script')
 
-     <script type="text/javascript">
-
-      function reply(caller){
-
-         document.getElementById('commentId').value = $(caller).attr('data-Commentid');
-
-         $('.replyDiv').insertAfter($(caller));
-         $('.replyDiv').show();
-      }
-
-      function reply_close(caller){
-         $('.replyDiv').hide();
-      }
-     </script>
      <script>
       document.addEventListener("DOMContentLoaded", function(event) { 
           var scrollpos = localStorage.getItem('scrollpos');

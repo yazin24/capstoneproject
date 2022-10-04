@@ -39,7 +39,7 @@
                
                 <div class="glassmorphism container flex justify-center items-center flex-col p-5">
 
-                    <h1 class="mb-5">Add Products</h1>
+                    <h1 class="mb-5">Add Productss</h1>
 
                     <form action="{{'add_product'}}" method="POST" enctype="multipart/form-data">
                       @csrf

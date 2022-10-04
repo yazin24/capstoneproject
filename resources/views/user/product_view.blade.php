@@ -2,12 +2,9 @@
 <section class="product_section layout_padding">
     <div class="container">
        <div class="heading_container heading_center">
-          <h2>
-             Our <span>products</span>
-          </h2>
 
           <div>
-            <form action="{{url('product_search')}}" method="get">
+            <form action="{{url('search_product')}}" method="get">
                @csrf
                <input type="text" name="search" placeholder="Search..." style="width: 400px;">
                <input type="submit" value="search">
